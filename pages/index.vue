@@ -2,7 +2,7 @@
    <div>
     <h1>Menu</h1>
     <ul>
-      <li v-for="item of menu">
+      <li v-for="item of menu" :key=item.title>
         <h2>{{ item.title }}</h2>
         <div>{{ item.description}}</div>
         <p>{{ item.currency}}{{ item.price}}</p>
