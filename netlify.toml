@@ -4,7 +4,7 @@
 
 
 [[plugins]]
-  package = "../plugins/demo-belly-data-contentful"
+  package = "./netlify/plugins/contentful-data"
 
   [plugins.inputs]
 

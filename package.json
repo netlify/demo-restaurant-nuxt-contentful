@@ -1,0 +1,24 @@
+{
+  "name": "demo-restaurant-nuxt-contentful",
+  "version": "1.0.0",
+  "description": "An example which uses content managed in Contentful to generate an archetypal restaurant site using Nuxt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netlify/demo-restaurant-nuxt-contentful.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netlify/demo-restaurant-nuxt-contentful/issues"
+  },
+  "homepage": "https://github.com/netlify/demo-restaurant-nuxt-contentful#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "contentful": "^8.5.6"
+  }
+}
