@@ -1,0 +1,16 @@
+[build] 
+  publish = "dist"
+  command = "echo no build yet"
+
+
+[[plugins]]
+  package = "../plugins/demo-belly-data-contentful"
+
+  [plugins.inputs]
+
+    # Directory for the generated JSON data files to reside
+    dataFilePath = "src/data"
+
+    # If the plugin fails, should it do so quietly or cancel the build?
+    # "failBuild" | "failPlugin"
+    fail = "failBuild"
