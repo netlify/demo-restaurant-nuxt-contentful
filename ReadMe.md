@@ -24,7 +24,7 @@ netlify env:set CONTENTFUL_SPACE_ID XXX
 # Add the Contentful Content Delivery API access token
 netlify env:set CONTENTFUL_CONTENT_API_TOKEN XXX
 
-# Run Netlify Build to prime your build cache with the data 
+# Run Netlify Build to prime your build with the data 
 # This will use your centrally managed env vars
 netlify build
 

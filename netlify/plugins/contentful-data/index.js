@@ -7,37 +7,55 @@ const client = require('contentful').createClient({
 });
 
 
-const fetchEntries = async () => {
-  const entries = await client.getEntries();
-  if (entries.items) {
-    return entries.items;
-  }
-  console.log(`Error getting Entries for ${contentType.name}.`);
-  return {};
+const fetchMenu = async () => {
+  const entries = await client.getEntries({
+    content_type: 'menuItem'
+  });
+
+  let menu = [];
+  for (item in entries.items) {
+    let thisItem = entries.items[item];
+    menu.push({
+      "title": thisItem.fields.title,
+      "description": thisItem.fields.description,
+      "price": thisItem.fields.price,
+      "currency": thisItem.fields.currency,
+      "category": thisItem.fields.category, 
+      "dietary": {
+        "vegan": thisItem.fields.vegan,
+        "vegetarian": thisItem.fields.vegetarian,
+        "glutenFree": thisItem.fields.glutenFree
+      }
+      //   "photo:": {
+      //     "imageUrl": STRING,
+      //     "attribution": {
+      //       "text": STRING,
+      //       "url": STRING
+      //     }
+      //   }
+    });
+  };
+
+  return menu;
+}
+
+// save the data to the specified file
+const saveData = async (data, path) => {
+  await fs.writeFileSync(path, JSON.stringify(data));
+  console.log('Fetched and stashed:', chalk.green(`=> ${path}`));
 }
 
 
 module.exports = {
 
   async onPreBuild({ inputs, utils }) {
-
     try {
+      const menu = await fetchMenu();
+      await saveData(menu, `${inputs.dataFilePath}/menu.json`);
 
-      const data = await fetchEntries();
-      console.log(`data`, data);
-               
-      // save the data to the specified file
-      await fs.writeFileSync(`${inputs.dataFilePath}/menu.json`, JSON.stringify(data));
-      console.log('Fetched and stashed:', chalk.green(`=> ${inputs.dataFilePath}/menu.json`));
-      
     }
     catch(err) {
-      // use the specified failure behaviour
-      if (inputs.fail == 'failPlugin') {
-        utils.build.failPlugin(`Error fetching data: ${err}`);
-      } else {
-        utils.build.failBuild(`Error fetching data: ${err}`);
-      }
+      utils.build.failBuild(`Error fetching data: ${err}`);
     }
   }
 };

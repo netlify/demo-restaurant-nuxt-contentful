@@ -7,10 +7,5 @@
   package = "./netlify/plugins/contentful-data"
 
   [plugins.inputs]
-
-    # Directory for the generated JSON data files to reside
+    # Directory for the generated JSON data files to reside in
     dataFilePath = "src/data"
-
-    # If the plugin fails, should it do so quietly or cancel the build?
-    # "failBuild" | "failPlugin"
-    fail = "failBuild"

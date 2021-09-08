@@ -2,5 +2,3 @@ name: contentful-data
 inputs:
   - name: dataFilePath
     default: data
-  - name: fail
-    default: failPlugin
