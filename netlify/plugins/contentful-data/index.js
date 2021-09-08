@@ -48,7 +48,7 @@ const saveData = async (data, path) => {
 
 module.exports = {
 
-  async onPreBuild({ inputs, utils }) {
+  async onPreBuild({ inputs }) {
     try {
       const menu = await fetchMenu();
       await saveData(menu, `${inputs.dataFilePath}/menu.json`);
@@ -58,4 +58,5 @@ module.exports = {
       utils.build.failBuild(`Error fetching data: ${err}`);
     }
   }
+
 };

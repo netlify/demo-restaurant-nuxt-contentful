@@ -1,6 +1,6 @@
 [build] 
   publish = "dist"
-  command = "echo no build yet"
+  command = "npm run build"
 
 
 [[plugins]]
@@ -8,4 +8,4 @@
 
   [plugins.inputs]
     # Directory for the generated JSON data files to reside in
-    dataFilePath = "src/data"
+    dataFilePath = "data"
