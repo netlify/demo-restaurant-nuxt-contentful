@@ -51,7 +51,7 @@ module.exports = {
   async onPreBuild({ inputs }) {
     try {
       const menu = await fetchMenu();
-      await saveData(menu, `${inputs.dataFilePath}/menu.json`);
+      await saveData(menu, `${inputs.dataDir}/menu.json`);
 
     }
     catch(err) {
