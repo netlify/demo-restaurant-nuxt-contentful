@@ -6,11 +6,12 @@
       <a href="/">Look at the home page</a>
     </p>
     <h2>Menu</h2>
-    <ul>
+    <ul class="menu">
       <li v-for="item of menu" :key=item.title>
         <h2>{{ item.title }}</h2>
         <div>{{ item.description}}</div>
         <p>{{ item.currency}}{{ item.price}}</p>
+        <img v-if="item.photo" :src="item.photo.imageUrl" :alt="item.photo.caption">
       </li>
     </ul>
      </div> 
@@ -26,3 +27,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .menu img {
+    width: 400px;
+  }
+</style>
