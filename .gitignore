@@ -3,4 +3,3 @@
 node_modules
 dist
 .nuxt
-netlify/plugins/demo-restaurant-data-contentful

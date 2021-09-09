@@ -2,8 +2,8 @@
   publish = "dist"
   command = "npm run build"
 
-
 [[plugins]]
+  # package = "../plugins/demo-belly-data-contentful"
   package = "./netlify/plugins/demo-restaurant-data-contentful"
 
   [plugins.inputs]
