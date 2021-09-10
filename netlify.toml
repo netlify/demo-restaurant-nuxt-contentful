@@ -3,6 +3,8 @@
   command = "npm run build"
 
 [[plugins]]
+  # package = "../demo-restaurant-sites-data/plugins/contentful"
+
   package = "./node_modules/@netlify/demo-restaurant-sites-data/plugins/contentful"
   # Coming soon...
   # package = "./node_modules/@netlify/demo-restaurant-sites-data/plugins/sanity"
