@@ -1,3 +1,0 @@
-[submodule "netlify"]
-	path = netlify
-	url = https://github.com/netlify/demo-restaurant-sites-data
