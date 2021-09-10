@@ -1,6 +1,8 @@
 # demo-restaurant-nuxt-contentful
 
  An example which uses content managed in Contentful to generate an archetypal restaurant site using Nuxt.
+
+ 👉 https://demo-restaurant-contentful-nuxt.netlify.app/
  
 
 ## Usage for Development and Deployment
