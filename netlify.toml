@@ -3,8 +3,11 @@
   command = "npm run build"
 
 [[plugins]]
-  # package = "../plugins/demo-belly-data-contentful"
-  package = "./netlify/plugins/contentful"
+  package = "./node_modules/demo-restaurant-sites-data/plugins/contentful"
+  # Coming soon...
+  # package = "./node_modules/demo-restaurant-sites-data/plugins/sanity"
+  # package = "./node_modules/demo-restaurant-sites-data/plugins/airtable"
+  # package = "./node_modules/demo-restaurant-sites-data/plugins/sanity"
 
   [plugins.inputs]
     # Directory for the generated JSON data files to reside in

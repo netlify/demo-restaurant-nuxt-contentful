@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/netlify/demo-restaurant-nuxt-contentful#readme",
   "dependencies": {
+    "@netlify/demo-restaurant-sites-data": "^0.1.0",
     "chalk": "^4.1.2",
     "contentful": "^8.5.6",
     "nuxt": "^2.15.8"
