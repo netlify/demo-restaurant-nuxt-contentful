@@ -2,8 +2,15 @@
   export default {
     props: ['item'],
     methods: {
-      visibleDietaryIcons() {
-        return ["V","G"];
+      // assemble the relevant dietary notes object into an array
+      visibleDietaryIcons(item) {
+        let icons = [];
+        for (const key in item.dietary) {
+          if (item.dietary[key]) {
+            icons.push(key)
+          }
+        }
+        return icons;
       }
     }
   }
@@ -13,20 +20,21 @@
   <section class="menu-item">
     <div class="menu-item-header">
       <h2 class="menu-item-title">{{ item.title }}</h2>
+      <span class="menu-item-price">{{ item.currency }}{{ item.price }}</span>  
       <ul class="menu-item-diet">      <li
-          v-for="diet in visibleDietaryIcons()"
+          v-for="diet in visibleDietaryIcons(item)"
           :key="`${item.title}-${diet}`"
         >
         <DietIcon :diet=diet />
         </li>
       </ul>
-      <span class="menu-item-price">{{ item.currency }}{{ item.price }}</span>  
     </div>
     <p class="menu-item-description">{{ item.description }}</p>
  
     <figure :v-if=item.photo.imageUrl>
       <img :src=item.photo.imageUrl :alt=item.photo.caption>
-      <figcaption>{{item.photo.caption}}</figcaption>
+    
+      <figcaption>{{item.photo.caption}} — <a :href=item.photo.attribution.url>Photo credit</a></figcaption>
     </figure>
     
   </section>

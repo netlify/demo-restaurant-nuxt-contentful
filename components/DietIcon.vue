@@ -3,16 +3,15 @@ export default {
 
   props: ["diet"],
   methods: {
-
-    symbol(){
-      switch (props.type) {
-        case 'Vegetarian':
+    symbol(d){
+      switch (d) {
+        case 'vegetarian':
           return 'V'
-        case 'Vegan':
+        case 'vegan':
           return 'VE'
-        case 'Pescatarian':
+        case 'pescatarian':
           return 'P'
-        case 'Gluten-Free':
+        case 'glutenFree':
           return 'GF'
       }
     }
@@ -23,7 +22,7 @@ export default {
 
 
 <template>
-  <abbr :title=diet class="diet-icon">{{diet}}</abbr>
+  <abbr :title=diet class="diet-icon">{{symbol(diet)}}</abbr>
 </template>
 
 
@@ -32,7 +31,8 @@ export default {
 .diet-icon {
   width: 32px;
   height: 32px;
-  border: 1px solid #222;
+  border: 2px solid var(--secondary-text-color);
+  background-color: #fff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
