@@ -29,8 +29,9 @@ export default {
 <style>
 
 .diet-icon {
-  width: 32px;
-  height: 32px;
+  font-size: 0.9em;
+  width: 2em;
+  height: 2em;
   border: 2px solid var(--secondary-text-color);
   background-color: #fff;
   border-radius: 50%;
@@ -39,4 +40,5 @@ export default {
   align-items: center;
   text-decoration: none;
 }
+
 </style>

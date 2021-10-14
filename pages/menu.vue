@@ -22,10 +22,5 @@
 
 
 <style scoped>
- 
- .menu-page {
-    margin: 80px;
-  }
-
 
 </style>

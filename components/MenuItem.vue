@@ -31,10 +31,10 @@
     </div>
     <p class="menu-item-description">{{ item.description }}</p>
  
-    <figure :v-if=item.photo.imageUrl>
+    <figure v-if=item.photo.imageUrl>
       <img :src=item.photo.imageUrl :alt=item.photo.caption>
-    
       <figcaption>{{item.photo.caption}} — <a :href=item.photo.attribution.url>Photo credit</a></figcaption>
+
     </figure>
     
   </section>

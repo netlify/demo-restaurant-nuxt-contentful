@@ -45,6 +45,11 @@ export default {
     }
   }
 
+  main {
+    margin: 80px;
+  }
+
+
   .home-grid {
     margin-left: 200px;
   }

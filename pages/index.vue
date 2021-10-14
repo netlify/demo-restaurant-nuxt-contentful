@@ -12,11 +12,14 @@
 </script>
 
 <template>
-  <div>
+  <main class="menu-page">
+    <h1 class="section-title">{{ info.name }}</h1>
+    <p class="section-strapline">{{ info.strapline}}</p>
+    <div class="section-intro">
+      {{ page.body }}
+    </div>
 
-    <h1>{{ page.title }}</h1>
-    <div>{{ page.body }}</div>
-    
+
     <h2>Testimonials</h2>
     <div v-for="item of testimonials" :key=item.date>
       <h3>{{ item.title }}</h3>
@@ -24,19 +27,7 @@
       <div>{{ item.body}}</div>
     </div>
 
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img v-for="item of gallery"
-        :key=item.attribution.url
-        :src=item.imageUrl
-        :alt=item.caption
-      >
-    </div>
-
-    <hr />
-
-    <footer>
-      <h2>Opening hours</h2>
+    <h2>Opening hours</h2>
       <div class="hours">
         <p v-for="day in info.hours" :key="day">
           {{day}}
@@ -48,19 +39,21 @@
           {{item.channel}} : <a :href="item.url">{{ item.displayName}} </a>
         </li>
       </ul>
-    </footer>
-  </div> 
+
+
+  </main>
 </template>
 
 
 
+
+
 <style scoped>
- .gallery img {
-   width: 250px;
- }
+
 
  .address p,
  .hours p {
    margin: 0;
  }
+
 </style>
