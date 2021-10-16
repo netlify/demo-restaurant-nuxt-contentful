@@ -1,7 +1,10 @@
 <template>
   <div class="home-grid">
     <MainSidebar />
-    <Nuxt />
+    <div class="page">
+      <Nuxt />
+      <MainFooter />
+    </div>
   </div>
 </template>
 
@@ -37,22 +40,33 @@ export default {
     color: var(--primary-text-color);
     background-color: var(--primary-page-color);
     font-size: 16px;
-  }
-
-  @media (min-width: 500px) {
-    body {
-      font-size: 18px;
-    }
-  }
-
-  main {
-    margin: 80px;
+    overflow-y: scroll;
   }
 
 
   .home-grid {
-    margin-left: 200px;
+    
   }
+
+  @media (min-width: 800px) {
+    body {
+      font-size: 18px;
+    }
+    .home-grid {
+      display:flex;
+      flex-direction: row;
+    }
+  }
+
+  .page {
+    margin: 0 auto;
+  }
+
+  main {
+    margin: 4rem;
+    max-width: 600px;
+  }
+
 
   .section-title {
     margin: 0;
@@ -75,6 +89,19 @@ export default {
   .section-intro {
     margin-bottom: 6rem;
   }
+
+  a:link,
+   a:visited {
+    color: #000;
+    text-decoration-color: #ccc;
+    text-decoration-thickness: 2px;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration-color: #c83030;
+  }
+
 </style>
 
 

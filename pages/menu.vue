@@ -11,7 +11,7 @@
 
 
 <template>
-  <main class="menu-page">
+  <main>
     <h1 class="section-title">{{ page.title }}</h1>
     <div class="section-intro">
       {{ page.body }}
@@ -21,6 +21,6 @@
 </template>
 
 
-<style scoped>
+<style >
 
 </style>

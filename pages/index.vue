@@ -12,13 +12,12 @@
 </script>
 
 <template>
-  <main class="menu-page">
+  <main>
     <h1 class="section-title">{{ info.name }}</h1>
     <p class="section-strapline">{{ info.strapline}}</p>
     <div class="section-intro">
       {{ page.body }}
     </div>
-
 
     <h2>Testimonials</h2>
     <div v-for="item of testimonials" :key=item.date>
@@ -28,18 +27,17 @@
     </div>
 
     <h2>Opening hours</h2>
-      <div class="hours">
-        <p v-for="day in info.hours" :key="day">
-          {{day}}
-        </p>
-      </div>
-      <h2>Social</h2>
-      <ul>
-        <li v-for="item in info.social" :key="item.channel">
-          {{item.channel}} : <a :href="item.url">{{ item.displayName}} </a>
-        </li>
-      </ul>
-
+    <div class="hours">
+      <p v-for="day in info.hours" :key="day">
+        {{day}}
+      </p>
+    </div>
+    <h2>Social</h2>
+    <ul>
+      <li v-for="item in info.social" :key="item.channel">
+        {{item.channel}} : <a :href="item.url">{{ item.displayName}} </a>
+      </li>
+    </ul>
 
   </main>
 </template>
