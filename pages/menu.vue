@@ -6,8 +6,11 @@
         page : require("../data/pages.json").menu
       }
     },
-    filters: {
-      marked: require('marked')
+    methods: {
+      markdown(str) {
+        const md = require('marked');
+        return md(str);
+      }
     }
   }
 </script>
@@ -16,12 +19,8 @@
 <template>
   <main>
     <h1 class="section-title">{{ page.title }}</h1>
-    <div class="section-intro" v-html=this.$options.filters.marked(page.description)></div>
+    <div class="section-intro" v-html=markdown(page.description)></div>
     <MenuItem v-for="item of menu" :key=item.title :item=item />
   </main>
 </template>
 
-
-<style >
-
-</style>

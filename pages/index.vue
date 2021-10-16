@@ -10,6 +10,12 @@
     filters: {
       formatDate: (dateStr) => Intl.DateTimeFormat("us-EN").format(new Date(dateStr)),
       marked: require('marked')
+    },
+    methods: {
+      markdown(str) {
+        const md = require('marked');
+        return md(str);
+      }
     }
   }
 </script>
@@ -18,7 +24,7 @@
   <main>
     <h1 class="section-title">{{ info.name }}</h1>
     <p class="section-strapline">{{ info.strapline}}</p>
-    <div class="section-intro" v-html=this.$options.filters.marked(page.body)></div>
+    <div class="section-intro" v-html=markdown(page.body)></div>
     
     <h2 class="section-title">Our diners say nice things</h2>
     <div v-for="item of testimonials" :key=item.date class="testimonial">

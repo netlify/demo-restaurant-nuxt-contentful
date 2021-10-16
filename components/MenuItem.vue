@@ -11,10 +11,11 @@
           }
         }
         return icons;
+      },
+      markdown(str) {
+        const md = require('marked');
+        return md(str);
       }
-    },
-    filters: {
-      marked: require('marked')
     }
   }
 </script>
@@ -32,7 +33,8 @@
         </li>
       </ul>
     </div>
-    <p class="menu-item-description" v-html=this.$options.filters.marked(item.description)></p>
+    <p class="menu-item-description" ></p>
+    <p class="menu-item-description" v-html=markdown(item.description)></p>
     <figure v-if=item.photo.imageUrl>
       <img :src=item.photo.imageUrl :alt=item.photo.caption>
       <figcaption>{{item.photo.caption}} — <a :href=item.photo.attribution.url>Photo credit</a></figcaption>

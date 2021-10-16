@@ -1,6 +1,5 @@
 <script>
 export default {
-
   props: ["diet"],
   methods: {
     symbol(d){
@@ -15,7 +14,6 @@ export default {
           return 'GF'
       }
     }
-
   }
 }
 </script>

@@ -2,10 +2,10 @@
   <footer class="main-footer">
     <p class="main-footer-text">
       Repo:
-      <a href="https://github.com/bencodezen/demo-restaurant-vue3-ts-contentful">GitHub</a>
+      <a href="https://github.com/netlify/demo-restaurant-nuxt-contentful">GitHub</a>
     </p>
     <p class="main-footer-text">
-      Built with <a href="https://v3.vuejs.org">Nuxt</a> and
+      Built with <a href="https://nuxtjs.org">Nuxt</a> and
       <a href="https://www.netlify.com">Netlify</a>
     </p>
   </footer>

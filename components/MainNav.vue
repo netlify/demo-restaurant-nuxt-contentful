@@ -7,7 +7,7 @@
   </nav>
 </template>
 
-<style scoped>
+<style>
 .main-nav-list {
   margin: 0;
   padding: 0;
