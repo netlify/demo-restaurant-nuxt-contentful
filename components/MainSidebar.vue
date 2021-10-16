@@ -2,8 +2,8 @@
 <template>
   <aside class="sidebar">
     <header>
-      <a href="/" class="logo-home">
-        <img src="~/assets/img/logo.svg" alt="" />
+      <a href="/" class="logo-home" title="Restuarant info and reviews">
+        <img src="~/assets/img/logo.svg" />
       </a>
       <MainNav />
     </header>

@@ -8,7 +8,6 @@
 ## Usage for Development and Deployment
 
 
-
 ### add the Contentful creds to your project as environment variable
 
 You can use the Netlify CLI for this
