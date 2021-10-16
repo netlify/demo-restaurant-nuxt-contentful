@@ -23,6 +23,7 @@
     "chalk": "^4.1.2",
     "contentful": "^8.5.6",
     "contentfull-belly-styles": "*",
+    "marked": "^3.0.7",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {

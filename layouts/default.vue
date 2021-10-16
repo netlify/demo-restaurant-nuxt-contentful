@@ -8,15 +8,6 @@
   </div>
 </template>
 
-<script>
-export default {
-
-  head: () => ({
-    
-  })
-    
-}
-</script>
 
 <style lang="css">
   * {
@@ -68,7 +59,7 @@ export default {
   }
 
 
-  .section-title {
+  h1.section-title {
     margin: 0;
     font-size: 3.5em;
     margin-bottom: 4rem;
@@ -76,7 +67,7 @@ export default {
     text-transform: uppercase;
   }
 
-  .section-title::after {
+  h1.section-title::after {
     content: '';
     display: block;
     width: 150px;
@@ -86,12 +77,32 @@ export default {
     background-color: #c83030;
   }
 
+  h2.section-title {
+    font-size: 2rem;
+    margin: 2em 0 0 0;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h2.section-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 6px;
+    margin-top: 0.2em;
+    margin-left: 1px;
+    background-color: #c83030;
+  }
+
+
+
   .section-intro {
     margin-bottom: 6rem;
   }
 
   a:link,
-   a:visited {
+  a:visited {
     color: #000;
     text-decoration-color: #ccc;
     text-decoration-thickness: 2px;
@@ -102,6 +113,9 @@ export default {
     text-decoration-color: #c83030;
   }
 
+  ul {
+    list-style: none;
+  }
 </style>
 
 
