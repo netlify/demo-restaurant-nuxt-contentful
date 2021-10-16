@@ -27,10 +27,10 @@
     align-items: center;
     height: 100px;
     list-style-type: none;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--secondary-accent-color)
   }
   .nav-item:last-child {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--secondary-accent-color);
   }
   .nav-item-link {
     display: grid;
@@ -39,6 +39,6 @@
     grid-row-gap: 5px;
     font-weight: bold;
     text-decoration: none;
-    color: #222;
+    color: var(--primary-text-color);
   }
 </style>

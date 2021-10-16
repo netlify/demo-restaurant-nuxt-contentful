@@ -13,7 +13,7 @@
 <style>
   .sidebar {
     background-color:#fff;
-    border-right: solid 1px #ddd;
+    border-right: solid 1px var(--secondary-accent-color);
   }
 
   .logo-home {
@@ -27,7 +27,6 @@
       width: 35%;
       max-width: 400px;
       min-height: 100vh;
-      
     }
     header {
       position: sticky;

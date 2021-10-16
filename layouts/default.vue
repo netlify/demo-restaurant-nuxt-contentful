@@ -18,13 +18,11 @@
 
   :root {
     --sansSerif: "Quicksand", "Segoe UI", Candara, "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-
     --primary-text-color: #333;
     --secondary-text-color: #555555;
     --primary-page-color: #f4f3f0;
-    --accent-color: #fa33ab;
-    --accent-color-faint: #fa33ab88;
-    --accent-color-alternate: #00d9ff;
+    --accent-color: #c83030;
+    --secondary-accent-color: #ccc;
   }
 
   body {
@@ -75,7 +73,7 @@
     height: 10px;
     margin-top: 0.2em;
     margin-left: 1px;
-    background-color: #c83030;
+    background-color: var(--accent-color);
   }
 
   h2.section-title {
@@ -93,7 +91,7 @@
     height: 6px;
     margin-top: 0.2em;
     margin-left: 1px;
-    background-color: #c83030;
+    background-color: var(--accent-color);
   }
 
 
@@ -105,13 +103,13 @@
   a:link,
   a:visited {
     color: #000;
-    text-decoration-color: #ccc;
+    text-decoration-color: var(--secondary-accent-color);
     text-decoration-thickness: 2px;
   }
 
   a:hover,
   a:focus {
-    text-decoration-color: #c83030;
+    text-decoration-color: var(--accent-color);
   }
 
   ul {

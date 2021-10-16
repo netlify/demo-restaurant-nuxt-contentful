@@ -6,10 +6,3 @@
     </ul>
   </nav>
 </template>
-
-<style>
-.main-nav-list {
-  margin: 0;
-  padding: 0;
-}
-</style>
