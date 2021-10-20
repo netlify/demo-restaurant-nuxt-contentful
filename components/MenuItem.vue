@@ -25,11 +25,12 @@
     <div class="menu-item-header">
       <h2 class="menu-item-title">{{ item.title }}</h2>
       <span class="menu-item-price">{{ item.currency }}{{ item.price }}</span>  
-      <ul class="menu-item-diet">      <li
+      <ul class="menu-item-diet">
+        <li
           v-for="diet in visibleDietaryIcons(item)"
           :key="`${item.title}-${diet}`"
         >
-        <DietIcon :diet=diet />
+          <DietIcon :diet=diet />
         </li>
       </ul>
     </div>

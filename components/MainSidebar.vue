@@ -2,7 +2,7 @@
 <template>
   <aside class="sidebar">
     <header>
-      <a href="/" class="logo-home" title="Restuarant info and reviews">
+      <a href="/" class="logo-home" title="Restaurant info and reviews">
         <img src="~/assets/img/logo.svg" />
       </a>
       <MainNav />
